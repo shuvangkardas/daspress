@@ -165,3 +165,31 @@ If you face any issues, use debug mode to identify errors:
 daspress --debug convert "post.md"
 ```
 
+
+# 👋 About Me
+Hi, I’m **Shuvangkar Das** — a power systems researcher with a Ph.D. in Electrical Engineering, currently working as a Research Engineer at EPRI. I work at the intersection of power electronics, inverter-based DERs (IBRs), and AI to help build smarter, greener, and more stable electric grids. 
+
+My work spans large-scale EMT simulations, firmware development, reinforcement learning, and hardware prototyping. Beyond engineering, I’m also a [YouTuber](https://www.youtube.com/@ShuvangkarDas) and content creator — sharing hands-on insights on productivity, research, and knowledge management. My goal is simple: to make complex ideas more accessible and actionable for everyone.
+
+<p><strong>Connect with me:<br></strong>
+<a href="https://www.youtube.com/@ShuvangkarDas" target="_blank">
+    <img src="https://img.shields.io/badge/YouTube-Subscribe-red?style=for-the-badge&logo=youtube">
+  </a>
+  <a href="https://www.linkedin.com/in/ShuvangkarDas" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin">
+  </a>
+  <a href="https://newsletter.shuvangkardas.com" target="_blank">
+    <img src="https://img.shields.io/badge/Newsletter-Subscribe-blue?style=for-the-badge">
+  </a>
+  <a href="https://twitter.com/shuvangkar_das" target="_blank">
+    <img src="https://img.shields.io/badge/Twitter-Follow-blue?style=for-the-badge&logo=twitter">
+  </a>
+  
+  <a href="https://github.com/shuvangkardas" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-Follow-black?style=for-the-badge&logo=github">
+  </a>
+  <a href="https://blog.shuvangkardas.com" target="_blank">
+    <img src="https://img.shields.io/badge/Blog-Read-blueviolet?style=for-the-badge">
+  </a>
+  
+</p>
