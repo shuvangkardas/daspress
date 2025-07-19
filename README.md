@@ -2,124 +2,166 @@
 
 Publish your Obsidian notes as blogs in **one click**.
 
-* 🖱 **Not technical?** [Download the portable app](https://shuvangkardas.com/daspress/) — the fastest and easiest way to use DasPress.
-* 💻 **Are you a developer?** [Follow the manual setup guide](#manual-setup-guide) to explore and customize the code.
+* **Not technical?** [Download the portable app](https://shuvangkardas.com/daspress/). This is the fastest and easiest way to use DasPress.
+* **Are you a developer?** [Follow the manual setup guide](#manual-setup-guide) to explore and customize the code.
 
+---
 
-## Currently Supported Operating System
-| Platform   | Status      | Setup Options       | Notes                    |
-| ---------- | ----------- | ------------------- | ------------------------ |
-| 🪟 Windows | ✅ Supported | Manual + Executable | Beta testers Needed |
-| 🍎 macOS   | ⚠️ Limited  | Manual only         | Beta testers needed      |
-| 🐧 Linux   | ⚠️ Limited  | Manual only         | Beta testers needed      |
+## Currently Supported Operating Systems
 
+| Platform | Status    | Setup Options         | Notes               |
+| -------- | --------- | --------------------- | ------------------- |
+| Windows  | Supported | Manual and Executable | Beta testers needed |
+| macOS    | Limited   | Manual only           | Beta testers needed |
+| Linux    | Limited   | Manual only           | Beta testers needed |
 
-## Blog Technolgy Support
-| Blog Platform     | Supported | Notes                                                                               |
-| ----------------- | --------- | ----------------------------------------------------------------------------------- |
-| Jekyll            | ✅         | Actively tested (used in [my blog](blog.shuvangkardas.com))                                               |
-| Hugo              | ✅         | Markdown-compatible, but not extensively tested                                     |
-| Hexo              | ✅         | Markdown-compatible, user testing welcome                                           |
-| Wordpress         | ❌         | Coming soon                                                                         |
-| Others (Markdown) | ✅         | Should work — feel free to test and [send feedback](mailto:shuvangkardas@gmail.com) |
+---
 
-Email [me](mailto:shuvangkarcdas@gmail.com) your requrest. What feature you think will be useful and what technology support are you looking for?
+## Blog Technology Support
+
+| Blog Platform     | Supported | Notes                                                                              |
+| ----------------- | --------- | ---------------------------------------------------------------------------------- |
+| Jekyll            | Yes       | Actively tested. Used in [my blog](https://blog.shuvangkardas.com)                 |
+| Hugo              | Yes       | Markdown-compatible, but not extensively tested                                    |
+| Hexo              | Yes       | Markdown-compatible. User testing is welcome                                       |
+| WordPress         | No        | Coming soon                                                                        |
+| Others (Markdown) | Yes       | Should work. Feel free to test and [send feedback](mailto:shuvangkardas@gmail.com) |
+
+If you want support for a new platform or feature, feel free to [email me](mailto:shuvangkarcdas@gmail.com) with your request.
+
+---
 
 ## Coming Soon
-- Mac and Linux support  
-- Multiple platforms support (WordPress, Ghost, Medium, Substack)  
-- Post scheduling  
-- SEO optimization (auto-rename Obsidian images)
-- Multi-site support
+
+* Full support for macOS and Linux
+* Platform integration for WordPress, Ghost, Medium, and Substack
+* Post scheduling
+* SEO optimization (e.g., auto-renaming Obsidian images)
+* Multi-site support
+
+---
 
 # Manual Setup Guide
 
 ### Install
+
 ```bash
 pip install daspress
 ```
 
 ### Setup
+
 ```bash
-python -m  daspress setup
+python -m daspress setup
 ```
 
 ### Verify Installation
+
 ```bash
-python -m  daspress --version
+python -m daspress --version
 ```
-Returns: `daspress <version>`
 
+Expected output: `daspress <version>`
 
+---
 
 ## Features
 
-- **Convert**:  Convert your notes into blog format. Sanitize note and images. Handle images and formatting
-- **Local Preview**: Start Jekyll server automatically for instant preview
-- **Git Publishing**: Auto-commit and push to your repository
-- **Smart Paths**: Works with Obsidian's file paths and regular filenames
-- **Cross-Platform**: Works on Windows, Mac, and Linux
+* **Convert**: Convert notes into blog format. Sanitizes text and images and handles formatting
+* **Local Preview**: Automatically starts a Jekyll server for preview
+* **Git Publishing**: Automatically commits and pushes to your Git repository
+* **Smart Paths**: Supports Obsidian file paths and standard filenames
+* **Cross-Platform**: Works on Windows, macOS, and Linux
 
-## 📋 Commands
+---
+
+## Commands
 
 ```bash
-python -m daspress setup                 # Interactive configuration wizard
-python -m daspress convert "post.md"     # Convert post to Jekyll format
-python -m daspress local "post.md"       # Convert + start local Jekyll server
-python -m daspress remote "post.md"      # Convert + publish to git repository  
-python -m daspress both "post.md"        # Convert + local preview + git publish
+python -m daspress setup                 # Interactive configuration wizard  
+python -m daspress convert "post.md"     # Convert post to Jekyll format  
+python -m daspress local "post.md"       # Convert and start local Jekyll server  
+python -m daspress remote "post.md"      # Convert and publish to Git repository  
+python -m daspress both "post.md"        # Convert, preview locally, and publish
 ```
+
+---
 
 ## Setup Requirements
 
-1. **Obsidian vault** with your blog posts
-2. **Jekyll blog** repository 
-3. **Git** configured for your Jekyll repository (for remote publishing)
-4. **Ruby/Jekyll** installed (for local server)
+1. An Obsidian vault with your blog posts
+2. A Jekyll blog repository
+3. Git installed and configured for the Jekyll repository
+4. Ruby and Jekyll installed for running the local server
+
+---
 
 ## Obsidian Integration
-1. Configure daspress from command line 
-2. Configure Obsidian Shell Command Plugin
-**Command:** 
+
+1. Run `daspress setup` from the command line
+2. Configure the Obsidian Shell Commands plugin
+
+**Shell Command**:
+
 ```bash
 python -m daspress remote "{{file_path:absolute}}"
 ```
-3. Install git and make sure you can post your blog from local machine
-4. 
 
-**Name:** "Publish Blog Post"
+3. Ensure Git is installed and local publishing works
+4. Add the command as a named action
 
-Now you can publish directly from Obsidian with one click!
+**Suggested name**: `Publish Blog Post`
+
+Now you can publish directly from Obsidian with a single click.
+
+---
 
 ## How It Works
 
-1. **Reads** your Obsidian markdown files
-2. **Converts** `![[image.png]]` syntax to Jekyll format
-3. **Copies** images from Obsidian to Jekyll assets folder
-4. **Saves** processed post to Jekyll `_posts` folder
-5. **Optionally** starts local server and/or publishes to git
+1. Reads your Obsidian markdown files
+2. Converts image links like `![[image.png]]` to Jekyll-compatible syntax
+3. Copies images from the Obsidian vault to the Jekyll assets folder
+4. Saves the converted post in the Jekyll `_posts` directory
+5. Optionally starts a local server and/or publishes to Git
+
+---
 
 ## Configuration
 
-Run `daspress setup` to configure:
-- Obsidian posts folder path
-- Obsidian images folder path  
-- Jekyll blog root directory
+Run:
 
-Configuration is saved to `~/.daspress/config.yaml`
+```bash
+daspress setup
+```
+
+This configures:
+
+* Obsidian posts folder path
+* Obsidian images folder path
+* Jekyll blog root directory
+
+Configuration is saved at `~/.daspress/config.yaml`
+
+---
 
 ## Documentation
 
-- See `docs/GETTING-STARTED.md` for detailed setup
-- See `QUICKSTART.md` for developers
+* See `docs/GETTING-STARTED.md` for step-by-step instructions
+* See `QUICKSTART.md` for developer usage and API integration
+
+---
 
 ## License
 
-See LICENSE.txt for terms and conditions.
+See `LICENSE.txt` for terms and conditions.
 
-## Issues
+---
 
-If you encounter any issues, run with debug mode.
+## Troubleshooting
+
+If you face any issues, use debug mode to identify errors:
+
 ```bash
 daspress --debug convert "post.md"
 ```
+
