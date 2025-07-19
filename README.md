@@ -91,7 +91,7 @@ python -m daspress remote "{{file_path:absolute}}"
 
 Now you can publish directly from Obsidian with one click!
 
-## 📁 How It Works
+## How It Works
 
 1. **Reads** your Obsidian markdown files
 2. **Converts** `![[image.png]]` syntax to Jekyll format
@@ -99,7 +99,7 @@ Now you can publish directly from Obsidian with one click!
 4. **Saves** processed post to Jekyll `_posts` folder
 5. **Optionally** starts local server and/or publishes to git
 
-## 🛠️ Configuration
+## Configuration
 
 Run `daspress setup` to configure:
 - Obsidian posts folder path
@@ -108,16 +108,16 @@ Run `daspress setup` to configure:
 
 Configuration is saved to `~/.daspress/config.yaml`
 
-## 📚 Documentation
+## Documentation
 
 - See `docs/GETTING-STARTED.md` for detailed setup
 - See `QUICKSTART.md` for developers
 
-## 📄 License
+## License
 
 See LICENSE.txt for terms and conditions.
 
-## 🐛 Issues
+## Issues
 
 If you encounter any issues, run with debug mode.
 ```bash
