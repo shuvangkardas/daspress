@@ -42,6 +42,8 @@ If you want support for a new platform or feature, feel free to [email me](mailt
 ---
 
 # Manual Setup Guide
+Detailed step-by-step instruction with screenshots available on my [blog](https://blog.shuvangkardas.com/obsidian-to-blog-v2-user-guide)
+
 
 ### Install
 
