@@ -1,3 +1,9 @@
+> [!note] 
+>  I’m actively adding new features to DasPress, including support for WordPress and other blog platforms.
+> 💡 Want your platform supported? Open an issue or start a discussion!
+> ⭐ Star this repo to show your support!
+
+
 # DasPress
 
 Publish your Obsidian notes as blogs in **one click**.
